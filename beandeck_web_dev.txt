@@ -1,0 +1,29 @@
+2) Product Quiz : 
+ 1. Show only 1 product as a result based on - Popularity and/or sales
+WOOCOMMERCE CODE REFERENCE :
+get_top_seller()
+From this we get the top seller from database.
+private get_top_seller() : object
+return type : object
+
+2.Show top 3 products
+
+WOOCOMMERCE CODE REFERENCE:
+
+THE FOLLOWING PHP CODE REFERS TO THE 3 TOP RATED PRODUCTS :
+
+public static function top_rated_products( $atts ) {
+		$atts = array_merge(
+			array(
+				'limit'        => '3',
+				'columns'      => '4',
+				'orderby'      => 'title',
+				'order'        => 'ASC',
+				'category'     => '',
+				'cat_operator' => 'IN',
+			),
+			(array) $atts
+		);
+
+The limit here defines the number of top rated products i.e. 3.
+Columns here represent the no. of columns in the database.
